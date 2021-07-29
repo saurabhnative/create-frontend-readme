@@ -1,0 +1,30 @@
+:root {
+  --purple: #35366e;
+  --blue: #0366d6;
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+} /* user agent */
+h3 {
+  font-size: 1.17em;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+img {
+  height: auto;
+  display: inline;
+}
+
+.info-tooltip {
+  max-width: 300px;
+  text-align: left;
+  font-size: 1rem !important;
+}
