@@ -42,10 +42,9 @@ export default function LeftSectionComponent({ updateReadmeContent }) {
         ${imgString}
         </p>`);
       } else if (key === "projectDemo") {
-        markdownData.push(`
-        <div>
-          <h2>Project Demo</h2>
-          <a href="${value}" alt="vale">${value}</a>
+        markdownData.push(`<div>
+        <h2>Project Demo</h2>
+        <a href="${value}" alt="vale">${value}</a>
         </div>`);
       } else if (key === "projectScreenshots") {
         markdownData.push(
@@ -168,7 +167,7 @@ export default function LeftSectionComponent({ updateReadmeContent }) {
           </div>
         </div>
         <div className="w-1/2 h-5/6 px-2 py-2 justify-start">
-          <div className="flex items-center">
+          <div className="flex items-center justify-start">
             <label htmlFor="socialify-image-url">Socialify Image URL</label>
             <div data-tip={`${renderSocialifyTooltip()}`} data-place="top">
               <IoMdInformationCircleOutline className="ml-1" />
@@ -179,7 +178,7 @@ export default function LeftSectionComponent({ updateReadmeContent }) {
               html={true}
               className="info-tooltip"
             />
-            <div className="ml-5">
+            <div className="ml-2">
               <button
                 className="bg-indigo-800 text-white px-3 py-1 rounded"
                 onClick={() => openSocialifyWebsite()}
