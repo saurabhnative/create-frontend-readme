@@ -1,3 +1,6 @@
+/**
+ * Component to take input for Socialify project image URL
+ */
 import React from "react";
 import ReactTooltip from "react-tooltip";
 import { IoMdInformationCircleOutline } from "react-icons/io";

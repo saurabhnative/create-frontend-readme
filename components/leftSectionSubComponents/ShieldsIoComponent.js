@@ -1,3 +1,6 @@
+/**
+ * Component to take input for Sheilds io badges URL
+ */
 import React from "react";
 import ReactTooltip from "react-tooltip";
 import { IoMdInformationCircleOutline } from "react-icons/io";

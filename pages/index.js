@@ -1,3 +1,6 @@
+/**
+ * Entry file for entire project structure
+ */
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Header from "../components/Header";

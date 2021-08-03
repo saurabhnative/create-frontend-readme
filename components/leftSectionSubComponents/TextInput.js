@@ -1,3 +1,7 @@
+/**
+ * Component to take input in form of text either using
+ * input or textarea HTML tags
+ */
 import classNames from "classnames";
 export default function RenderTextInput(props) {
   function renderInputSection() {

@@ -1,3 +1,7 @@
+/**
+ * Parent level component for taking inputs for basic version
+ * of README generation
+ */
 import React, { useState } from "react";
 import "react-tagsinput/react-tagsinput.css"; // If using WebPack and style-loader.
 // components

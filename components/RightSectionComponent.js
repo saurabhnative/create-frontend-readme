@@ -1,3 +1,6 @@
+/**
+ * Component to show preview of final README based on form inputs
+ */
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";

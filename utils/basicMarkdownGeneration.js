@@ -1,4 +1,9 @@
 import sortBy from "lodash/sortBy";
+/**
+ * Function to generate markdown data from HTMl form inputs in basic version
+ * @param {*} sourceObject
+ * @returns markdown data
+ */
 export default function generateBasicMarkDownData(sourceObject) {
   const markdownData = [];
   const sortedSourceObject = sortBy(sourceObject, [
