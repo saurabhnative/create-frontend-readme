@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
-import LeftSectionComponent from "../components/LeftSectionComponent";
+import LeftSectionBasicComponent from "../components/LeftSectionBasicComponent";
 import RightSectionComponent from "../components/RightSectionComponent";
 import TurndownService from "turndown";
 const turndownService = new TurndownService();
@@ -31,7 +31,7 @@ export default function Home() {
       <main className="flex flex-col items-center w-full flex-1 text-center">
         <Header markdown={markdown} />
         <div className="w-full flex">
-          <LeftSectionComponent
+          <LeftSectionBasicComponent
             readmeContent={readmeContent}
             updateReadmeContent={updateReadmeContent}
           />

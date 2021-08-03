@@ -1,9 +1,12 @@
 // header component in next.js syntax
 import copy from "copy-to-clipboard";
 import { FaCopy } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Header({ markdown }) {
   function copyToClipboard() {
     copy(markdown);
+    toast.success("Text copied to clipboard!");
   }
   return (
     <nav className="w-full h-14 bg-indigo-800 text-white flex items-center justify-start pl-20">
@@ -13,6 +16,11 @@ function Header({ markdown }) {
           <FaCopy className="mr-1" />
           Copy to Clipboard
         </button>
+        <ToastContainer
+          autoClose={2000}
+          hideProgressBar={true}
+          pauseOnHover={false}
+        />
       </div>
     </nav>
   );

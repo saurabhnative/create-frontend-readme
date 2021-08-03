@@ -1,6 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 :root {
   --purple: #35366e;
   --blue: #0366d6;
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
