@@ -3,7 +3,7 @@
  */
 import React from "react";
 import ReactTooltip from "react-tooltip";
-import { IoMdInformationCircleOutline } from "react-icons/io";
+import { IoMdInformationCircleOutline, IoMdOpen } from "react-icons/io";
 
 export default function SocialifyInputComponent(props) {
   function openSocialifyWebsite() {
@@ -33,10 +33,11 @@ export default function SocialifyInputComponent(props) {
         />
         <div className="ml-2">
           <button
-            className="bg-indigo-800 text-white px-3 py-1 rounded"
+            className="bg-indigo-800 text-white px-2 rounded flex items-center link-button"
             onClick={() => openSocialifyWebsite()}
           >
-            Generate Image
+            <span className="text-sm">Open Socialify</span>
+            <IoMdOpen />
           </button>
         </div>
       </div>
