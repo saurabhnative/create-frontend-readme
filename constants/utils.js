@@ -10,3 +10,8 @@ export const README_ELEMENTS_ORDER = {
   projectDemo: 5,
   projectScreenshots: 6,
 };
+
+export const INFO_POPUP_CONTSTANTS = {
+  SHEILDS_IO_COMPONENT: "shieldsIoComponent",
+  SOCIALIFY_COMPONENT: "socialifyComponent",
+};

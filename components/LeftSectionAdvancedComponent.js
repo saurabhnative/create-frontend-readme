@@ -56,7 +56,7 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
   return (
     <div className="w-1/2">
       <nav className="w-full flex justify-start border-b">
-        <div className="border border-indigo-200 px-5 py-2 w-56 text-indigo-800">
+        <div className="border border-indigo-200 border-b-0 px-5 py-2 w-56 text-indigo-800">
           Form
         </div>
       </nav>
@@ -65,7 +65,7 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
           trigger="Step 1: Add title, description and socialify image(optional)"
           open={true}
         >
-          <div className="flex">
+          <div className="flex mt-2">
             <div className="px-6">
               {renderTitleInput()}
               {renderDescriptionInput()}

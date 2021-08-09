@@ -1,36 +1,34 @@
 /**
  * Component to take input for Socialify project image URL
  */
-import React from "react";
-import ReactTooltip from "react-tooltip";
+import React, { useState } from "react";
 import { IoMdInformationCircleOutline, IoMdOpen } from "react-icons/io";
+import PopUpComponent from "../popupComponent";
 
+import { INFO_POPUP_CONTSTANTS } from "../../constants/utils";
 export default function SocialifyInputComponent(props) {
+  const [isInfoPopUpOpen, updateInfoPopUpVisibility] = useState(false);
   function openSocialifyWebsite() {
     window.open(`https://socialify.git.ci/`, "_blank", "noopener noreferrer");
   }
-  function renderSocialifyTooltip() {
-    return `
-          <span>
-              Socialify helps you showcase your project to the world by generating a beautiful project image. 
-              You can open Socialify website by clicking the <b>Generate Image</b> button.
-              Copy the URL generated from the website and paste it below.
-          </span>
-        `;
+  function renderSocialifyInfoPopUp() {
+    if (isInfoPopUpOpen) {
+      return (
+        <PopUpComponent
+          source={INFO_POPUP_CONTSTANTS.SOCIALIFY_COMPONENT}
+          updateInfoPopUpVisibility={updateInfoPopUpVisibility}
+        />
+      );
+    }
   }
   return (
     <>
       <div className="flex items-center justify-start">
         <label htmlFor="socialify-image-url">Socialify Image URL</label>
-        <div data-tip={`${renderSocialifyTooltip()}`} data-place="top">
-          <IoMdInformationCircleOutline className="ml-1" />
+        <div onClick={() => updateInfoPopUpVisibility(true)}>
+          <IoMdInformationCircleOutline className="ml-1 cursor-pointer" />
         </div>
-        <ReactTooltip
-          place="top"
-          type="light"
-          html={true}
-          className="info-tooltip"
-        />
+        <div>{renderSocialifyInfoPopUp()}</div>
         <div className="ml-2">
           <button
             className="bg-indigo-800 text-white px-2 rounded flex items-center link-button"

@@ -8,7 +8,7 @@
   text-decoration: none;
   color: var(--indigo);
   position: relative;
-  border: 1px solid white;
+  border: 1px solid rgb(199, 210, 254);
   padding: 10px;
 }
 .Collapsible__trigger:after {
