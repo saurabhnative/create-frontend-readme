@@ -22,7 +22,9 @@ export default function RenderTextInput(props) {
         <textarea
           type="text"
           id={props.id}
-          className="border rounded mt-2 py-1 px-2 h-32 w-56"
+          className={classNames("border rounded mt-2 py-1 px-2 h-32 w-56", {
+            [props.optionalInputClassName]: props.optionalInputClassName,
+          })}
           placeholder={props.placeholder}
           onChange={(e) =>
             props.formHandlerFunction(props.handlerParam, e.target.value)

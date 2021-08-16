@@ -10,15 +10,18 @@
   position: relative;
   border: 1px solid rgb(199, 210, 254);
   padding: 10px;
+  text-align: left;
+  padding-left: 1.5rem;
 }
 .Collapsible__trigger:after {
   font-family: "FontAwesome";
   content: "\f107";
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 3px;
   display: block;
   transition: transform 300ms;
+  font-size: 24px;
 }
 .Collapsible__trigger.is-open:after {
   transform: rotateZ(180deg);
@@ -30,4 +33,35 @@
 
 .link-button {
   padding-bottom: 1px;
+}
+
+.react-tagsinput {
+  width: 32rem;
+  text-align: left;
+  border: 1px solid rgb(229, 231, 235) !important;
+  border-radius: 0.25rem;
+}
+
+.react-tagsinput-input {
+  width: 30rem !important;
+}
+.react-tagsinput-input::placeholder {
+  font-size: 1rem;
+}
+
+.react-tagsinput-remove {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--indigo);
+}
+
+.react-tagsinput-tag {
+  background-color: var(--light-indigo) !important;
+  border-color: var(--light-indigo) !important;
+  color: var(--indigo) !important;
+}
+
+.readme-input-section,
+.readme-output-section {
+  max-height: 86vh;
 }

@@ -6,20 +6,27 @@
   --purple: #35366e;
   --blue: #0366d6;
   --indigo: rgb(55, 48, 163);
+  --light-indigo: rgb(199, 210, 254);
+  --color-bg-tertiary: rgb(246, 248, 250);
 }
 
 body {
   font-family: "Lato", sans-serif;
+  height: 100vh;
 }
 
 h1 {
   font-size: 2em;
+  font-weight: 600;
 }
 h2 {
   font-size: 1.5em;
+  font-weight: 600;
+  display: block;
 } /* user agent */
 h3 {
   font-size: 1.17em;
+  font-weight: 600;
 }
 
 a {
@@ -36,4 +43,23 @@ img {
   max-width: 300px;
   text-align: left;
   font-size: 1rem !important;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  padding-inline-start: 40px;
+}
+
+pre {
+  background-color: var(--color-bg-tertiary);
+  border-radius: 6px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 8px;
+}
+
+#__next {
+  height: 100vh;
 }

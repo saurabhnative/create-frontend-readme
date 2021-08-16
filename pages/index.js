@@ -8,10 +8,22 @@ import LeftSectionBasicComponent from "../components/LeftSectionBasicComponent";
 import LeftSectionAdvancedComponent from "../components/LeftSectionAdvancedComponent";
 import RightSectionComponent from "../components/RightSectionComponent";
 import TurndownService from "turndown";
-const turndownService = new TurndownService();
+const turndownService = new TurndownService({ codeBlockStyle: "fenced" });
 turndownService.keep("p");
 turndownService.addRule("img", {
   filter: ["p"],
+  replacement: (content, node) => node.outerHTML + "\n\n",
+});
+turndownService.addRule("h1", {
+  filter: ["h1"],
+  replacement: (content, node) => node.outerHTML + "\n\n",
+});
+turndownService.addRule("h2", {
+  filter: ["h2"],
+  replacement: (content, node) => node.outerHTML + "\n\n",
+});
+turndownService.addRule("img", {
+  filter: ["img"],
   replacement: (content, node) => node.outerHTML + "\n\n",
 });
 export default function Home() {
@@ -26,13 +38,13 @@ export default function Home() {
   }, [readmeContent]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div>
       <Head>
         <title>Create Frontend README App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center w-full flex-1 text-center">
+      <main>
         <Header markdown={markdown} />
         <div className="w-full flex">
           <LeftSectionAdvancedComponent

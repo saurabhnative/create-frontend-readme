@@ -7,55 +7,44 @@ import PopUpComponent from "../popupComponent";
 import { INFO_POPUP_CONTSTANTS } from "../../constants/utils";
 import TagsInput from "react-tagsinput";
 import "react-tagsinput/react-tagsinput.css";
-export default function ShieldsIoComponent(props) {
+export default function FeaturesComponent(props) {
   const [isInfoPopUpOpen, updateInfoPopUpVisibility] = useState(false);
-  const [badgeURLs, updatebadgeURLS] = useState([]);
-  function renderShieldsIOInfoPopUp() {
+  const [featuresList, updateFeaturesList] = useState([]);
+  function renderFeaturesInfoPopUp() {
     if (isInfoPopUpOpen) {
       return (
         <PopUpComponent
-          source={INFO_POPUP_CONTSTANTS.SHEILDS_IO_COMPONENT}
+          source={INFO_POPUP_CONTSTANTS.FEATURES_COMPONENT}
           updateInfoPopUpVisibility={updateInfoPopUpVisibility}
         />
       );
     }
   }
-  function openShieldsIOWebsite() {
-    window.open(`https://shields.io/`, "_blank", "noopener noreferrer");
-  }
-  function updateShieldsURL(tags) {
-    updatebadgeURLS(tags);
-    props.formHandlerFunction(props.handlerParam, tags);
+  function updateFeaturesData(features) {
+    updateFeaturesList(features);
+    props.formHandlerFunction(props.handlerParam, features);
   }
   return (
     <div className="flex flex-col items-start mt-2">
       <div className="flex items-center">
         <div className="flex items-center">
-          <label htmlFor="project-description">Shields</label>
+          <label htmlFor="project-description">Features</label>
           <div
             className="cursor-pointer"
             onClick={() => updateInfoPopUpVisibility(true)}
           >
             <IoMdInformationCircleOutline className="ml-1" />
           </div>
-          <div>{renderShieldsIOInfoPopUp()}</div>
-        </div>
-        <div className="ml-5">
-          <button
-            className="bg-indigo-800 text-white px-3 py-1 rounded"
-            onClick={() => openShieldsIOWebsite()}
-          >
-            Generate Sheilds
-          </button>
+          <div>{renderFeaturesInfoPopUp()}</div>
         </div>
       </div>
       <div className="my-2">
         <TagsInput
-          value={badgeURLs}
-          onChange={updateShieldsURL}
-          addKeys={[9, 13, 188]}
+          value={featuresList}
+          onChange={updateFeaturesData}
+          addKeys={[9, 13]}
           inputProps={{
-            placeholder: "Enter a badge URL and press enter",
+            placeholder: "Add a feature and press Enter",
           }}
         />
       </div>

@@ -39,7 +39,9 @@ export default function RightSectionComponent({ markdown }) {
           <FaFileCode onClick={() => toggleMarkdownCode()} />
         </div>
       </nav>
-      <div className="flex">{renderPreview()}</div>
+      <div className="flex overflow-scroll readme-output-section">
+        {renderPreview()}
+      </div>
     </div>
   );
 }

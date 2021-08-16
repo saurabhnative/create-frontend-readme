@@ -5,13 +5,20 @@
 export const README_ELEMENTS_ORDER = {
   title: 1,
   socialifyImage: 2,
-  shieldsData: 3,
-  description: 4,
+  description: 3,
+  shieldsData: 4,
   projectDemo: 5,
-  projectScreenshots: 6,
+  projectScreenShots: 6,
+  featuresList: 7,
+  installationSteps: 8,
+  contributionGuideLines: 9,
+  technologiesList: 10,
+  license: 11,
+  projectSupportInformation: 12,
 };
 
 export const INFO_POPUP_CONTSTANTS = {
   SHEILDS_IO_COMPONENT: "shieldsIoComponent",
   SOCIALIFY_COMPONENT: "socialifyComponent",
+  FEATURES_COMPONENT: "featuresComponent",
 };
