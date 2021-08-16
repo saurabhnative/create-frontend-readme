@@ -82,6 +82,8 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
       <FeaturesComponent
         formHandlerFunction={updateFormData}
         handlerParam="featuresList"
+        labelName="Features"
+        placeHolderValue="feature"
       />
     );
   }
@@ -90,6 +92,8 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
       <FeaturesComponent
         formHandlerFunction={updateFormData}
         handlerParam="technologiesList"
+        labelName="Techologies"
+        placeHolderValue="technology"
       />
     );
   }
@@ -219,7 +223,7 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
           trigger="Step 9: License Information(Optional)"
           open={false}
         >
-          <div className="flex mt-2">
+          <div className="flex my-2">
             <div className="px-6">{renderLicenseName()}</div>
           </div>
         </Collapsible>
@@ -227,7 +231,7 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
           trigger="Step 10: Enter Support Information(Optional)"
           open={false}
         >
-          <div className="flex mt-2">
+          <div className="flex">
             <div className="px-6">{renderSupportPage()}</div>
           </div>
         </Collapsible>

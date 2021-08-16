@@ -11,7 +11,7 @@ export default function SupportProjectComponent(props) {
     props.formHandlerFunction(props.handlerParam, updatedObject);
   }
   return (
-    <div className="my-2">
+    <div className="mb-2">
       <RenderTextInput
         labelName="Enter support message"
         id="project-support-message"

@@ -28,7 +28,7 @@ export default function FeaturesComponent(props) {
     <div className="flex flex-col items-start mt-2">
       <div className="flex items-center">
         <div className="flex items-center">
-          <label htmlFor="project-description">Features</label>
+          <label htmlFor="project-description">{props.labelName}</label>
           <div
             className="cursor-pointer"
             onClick={() => updateInfoPopUpVisibility(true)}
@@ -44,7 +44,7 @@ export default function FeaturesComponent(props) {
           onChange={updateFeaturesData}
           addKeys={[9, 13]}
           inputProps={{
-            placeholder: "Add a feature and press Enter",
+            placeholder: `Add a ${props.placeHolderValue} and press Enter`,
           }}
         />
       </div>
