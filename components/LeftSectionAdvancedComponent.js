@@ -6,7 +6,6 @@ import RenderTextInput from "./leftSectionSubComponents/TextInput";
 import ShieldsIoComponent from "./leftSectionSubComponents/ShieldsIoComponent";
 import SocialifyInputComponent from "./leftSectionSubComponents/SocialifyInputComponent";
 import FeaturesComponent from "./leftSectionSubComponents/FeaturesComponent";
-import ProjectScreenshotsComponent from "./leftSectionSubComponents/ProjectScreenshotsComponent";
 import MultipleStepsComponent from "./leftSectionSubComponents/MultipleStepsComponent";
 import SupportProjectComponent from "./leftSectionSubComponents/SupportProjectComponent";
 // utility functions
