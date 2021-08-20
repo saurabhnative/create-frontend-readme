@@ -14,7 +14,7 @@ export default function RightSectionComponent({ markdown }) {
   function renderPreview() {
     if (!shouldShowMarkdown) {
       return (
-        <div className="w-full px-2 py-2 text-left text-black">
+        <div className="w-full p-4 text-left text-black">
           <ReactMarkdown
             children={markdown}
             rehypePlugins={[rehypeRaw]}

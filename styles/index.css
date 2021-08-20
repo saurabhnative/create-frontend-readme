@@ -50,6 +50,10 @@ ul {
   padding-inline-start: 40px;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
 pre {
   background-color: var(--color-bg-tertiary);
   border-radius: 6px;

@@ -1,6 +1,6 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useState, createContext } from "react";
 import Collapsible from "react-collapsible";
-
+import classNames from "classnames";
 // components
 import RenderTextInput from "./leftSectionSubComponents/TextInput";
 import ShieldsIoComponent from "./leftSectionSubComponents/ShieldsIoComponent";
@@ -263,13 +263,25 @@ export default function LeftSectionAdvancedComponent({
     <div className="w-1/2 max-h-screen overflow-hidden">
       <nav className="w-full flex justify-start border-b">
         <div
-          className="border border-indigo-200 border-b-0 border-r-0 px-5 py-2 w-56 text-indigo-800 cursor-pointer rounded"
+          className={classNames(
+            "border border-indigo-200 border-b-0 border-r-0 px-5 py-2 w-56 text-indigo-800 cursor-pointer rounded",
+            {
+              "bg-indigo-100 bg-opacity-50":
+                activeInputOption === LEFT_SECTION_PARTS.FORM_INPUT,
+            }
+          )}
           onClick={() => updateActiveInputOption(LEFT_SECTION_PARTS.FORM_INPUT)}
         >
           Form
         </div>
         <div
-          className="border border-indigo-200 border-b-0 px-5 py-2 w-56 text-indigo-800 cursor-pointer rounded-tl rounded-tr"
+          className={classNames(
+            "border border-indigo-200 border-b-0 px-5 py-2 w-56 text-indigo-800 cursor-pointer rounded",
+            {
+              "bg-indigo-100 bg-opacity-50":
+                activeInputOption === LEFT_SECTION_PARTS.MARKDOWN_INPUT,
+            }
+          )}
           onClick={() =>
             updateActiveInputOption(LEFT_SECTION_PARTS.MARKDOWN_INPUT)
           }
