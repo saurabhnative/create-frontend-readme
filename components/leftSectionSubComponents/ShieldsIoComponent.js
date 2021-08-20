@@ -1,15 +1,27 @@
 /**
  * Component to take input for Sheilds io badges URL
  */
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import PopUpComponent from "../popupComponent";
 import { INFO_POPUP_CONTSTANTS } from "../../constants/utils";
 import TagsInput from "react-tagsinput";
 import "react-tagsinput/react-tagsinput.css";
+import { MarkdownContext } from "../LeftSectionAdvancedComponent";
+import { getFormValue } from "../../utils/formGeneration";
+
 export default function ShieldsIoComponent(props) {
   const [isInfoPopUpOpen, updateInfoPopUpVisibility] = useState(false);
   const [badgeURLs, updatebadgeURLS] = useState([]);
+  const { formContentJSONArray } = useContext(MarkdownContext);
+  useEffect(() => {
+    if (formContentJSONArray.length > 0) {
+      const value = getFormValue(formContentJSONArray, props.handlerParam);
+      if (value) {
+        updatebadgeURLS(value);
+      }
+    }
+  }, []);
   function renderShieldsIOInfoPopUp() {
     if (isInfoPopUpOpen) {
       return (

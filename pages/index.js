@@ -50,6 +50,8 @@ export default function Home() {
           <LeftSectionAdvancedComponent
             readmeContent={readmeContent}
             updateReadmeContent={updateReadmeContent}
+            markdown={markdown}
+            updateMarkDownContent={updateMarkDownContent}
           />
           <RightSectionComponent markdown={markdown} />
         </div>

@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { FiPlusCircle } from "react-icons/fi";
+import { MarkdownContext } from "../LeftSectionAdvancedComponent";
+import { getFormValue } from "../../utils/formGeneration";
+
 export default function MultipleStepsComponent(props) {
   const [multiStepInputArray, updateMultiStepInputArray] = useState([
     { firstInputValue: null, secondInputValue: null },
   ]);
+  const { formContentJSONArray } = useContext(MarkdownContext);
+  useEffect(() => {
+    if (formContentJSONArray.length > 0) {
+      const value = getFormValue(formContentJSONArray, props.handlerParam);
+      if (value) {
+        updateMultiStepInputArray(value);
+      }
+    }
+  }, []);
   function updateInputArray(objectKey, objectValue, index) {
     let inputObject = {};
     if (multiStepInputArray[index]) {
@@ -18,15 +30,18 @@ export default function MultipleStepsComponent(props) {
   function renderFirstInput(index, element) {
     return (
       <div className="flex flex-col items-start">
-        <label htmlFor="first-text-input">{props.firstInputLabelName}</label>
+        <label htmlFor={`first-text-input${props.firstInputLabelName}`}>
+          {props.firstInputLabelName}
+        </label>
         <input
           type="text"
-          id="first-text-input"
+          id={`first-text-input${props.firstInputLabelName}`}
           className="border rounded mt-1 py-1 px-2 w-52"
           placeholder={props.firstInputPlaceholder}
           onChange={(e) =>
             updateInputArray("firstInputValue", e.target.value, index)
           }
+          value={element.firstInputValue}
         />
       </div>
     );
@@ -37,12 +52,13 @@ export default function MultipleStepsComponent(props) {
         <label htmlFor="second-text-input">{props.secondInputLabelName}</label>
         <input
           type="text"
-          id="second-text-input"
+          id={`second-text-input${props.secondInputLabelName}`}
           className="border rounded mt-1 py-1 px-2 w-52"
           placeholder={props.secondInputPlaceholder}
           onChange={(e) =>
             updateInputArray("secondInputValue", e.target.value, index)
           }
+          value={element.secondInputValue}
         />
       </div>
     );
@@ -51,7 +67,7 @@ export default function MultipleStepsComponent(props) {
     if (props.thirdInputLabelName && props.thirdInputPlaceholder) {
       return (
         <div className="flex flex-col items-start ml-4">
-          <label htmlFor="thirs-text-input">{props.thirdInputLabelName}</label>
+          <label htmlFor="third-text-input">{props.thirdInputLabelName}</label>
           <input
             type="text"
             id="second-text-input"
@@ -60,6 +76,7 @@ export default function MultipleStepsComponent(props) {
             onChange={(e) =>
               updateInputArray("thirdInputValue", e.target.value, index)
             }
+            value={element.thirdInputValue}
           />
         </div>
       );

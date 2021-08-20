@@ -22,3 +22,12 @@ export const updateFormObject = (tempArray, key, value) => {
   }
   return tempArray;
 };
+
+export const getFormValue = (formContentJSONArray, handlerParam) => {
+  const formObject = formContentJSONArray.find((formObject) => {
+    return formObject.element === handlerParam;
+  });
+  if (formObject) {
+    return formObject.value;
+  }
+};

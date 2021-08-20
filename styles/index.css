@@ -62,3 +62,11 @@ pre {
 #__next {
   height: 100vh;
 }
+
+.site-header {
+  height: 8vh;
+}
+
+.right-section-container {
+  height: 92vh;
+}

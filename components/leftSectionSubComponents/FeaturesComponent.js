@@ -1,12 +1,15 @@
 /**
  * Component to take input for Sheilds io badges URL
  */
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import PopUpComponent from "../popupComponent";
 import { INFO_POPUP_CONTSTANTS } from "../../constants/utils";
 import TagsInput from "react-tagsinput";
 import "react-tagsinput/react-tagsinput.css";
+import { MarkdownContext } from "../LeftSectionAdvancedComponent";
+import { getFormValue } from "../../utils/formGeneration";
+
 export default function FeaturesComponent(props) {
   const [isInfoPopUpOpen, updateInfoPopUpVisibility] = useState(false);
   const [featuresList, updateFeaturesList] = useState([]);
@@ -20,6 +23,15 @@ export default function FeaturesComponent(props) {
       );
     }
   }
+  const { formContentJSONArray } = useContext(MarkdownContext);
+  useEffect(() => {
+    if (formContentJSONArray.length > 0) {
+      const value = getFormValue(formContentJSONArray, props.handlerParam);
+      if (value) {
+        updateFeaturesList(value);
+      }
+    }
+  }, []);
   function updateFeaturesData(features) {
     updateFeaturesList(features);
     props.formHandlerFunction(props.handlerParam, features);

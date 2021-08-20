@@ -22,3 +22,8 @@ export const INFO_POPUP_CONTSTANTS = {
   SOCIALIFY_COMPONENT: "socialifyComponent",
   FEATURES_COMPONENT: "featuresComponent",
 };
+
+export const LEFT_SECTION_PARTS = {
+  FORM_INPUT: "formInput",
+  MARKDOWN_INPUT: "markdownInput",
+};

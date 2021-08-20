@@ -11,7 +11,6 @@ export default function generateBasicMarkDownData(sourceObject) {
       return o.index;
     },
   ]);
-  console.log("sortedSourceObject", sortedSourceObject);
   sortedSourceObject.forEach(function (sourceObject) {
     const value = sourceObject.value;
     const key = sourceObject.element;

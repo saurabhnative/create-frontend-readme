@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, createContext } from "react";
 import Collapsible from "react-collapsible";
 
 // components
@@ -8,12 +8,23 @@ import SocialifyInputComponent from "./leftSectionSubComponents/SocialifyInputCo
 import FeaturesComponent from "./leftSectionSubComponents/FeaturesComponent";
 import MultipleStepsComponent from "./leftSectionSubComponents/MultipleStepsComponent";
 import SupportProjectComponent from "./leftSectionSubComponents/SupportProjectComponent";
+import LeftSectionMarkDownComponent from "./leftSectionSubComponents/LeftSectionMarkDownComponent";
 // utility functions
 import generateBasicMarkDownData from "../utils/basicMarkdownGeneration";
 import { updateFormObject } from "../utils/formGeneration";
+// constants
+import { LEFT_SECTION_PARTS } from "../constants/utils";
 
-export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
+export const MarkdownContext = createContext(null);
+export default function LeftSectionAdvancedComponent({
+  updateReadmeContent,
+  markdown,
+  updateMarkDownContent,
+}) {
   const [formContentJSONArray, updateFormContentObject] = useState([]);
+  const [activeInputOption, updateActiveInputOption] = useState(
+    LEFT_SECTION_PARTS.FORM_INPUT
+  );
   function genUpdatedMarkDownData(sourceObject) {
     const markDownData = generateBasicMarkDownData(sourceObject);
     updateReadmeContent(markDownData);
@@ -161,17 +172,12 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
       />
     );
   }
-  return (
-    <div className="w-1/2 max-h-screen overflow-hidden">
-      <nav className="w-full flex justify-start border-b">
-        <div className="border border-indigo-200 border-b-0 px-5 py-2 w-56 text-indigo-800">
-          Form
-        </div>
-      </nav>
+  function renderFormInputComponent() {
+    return (
       <div className="w-full text-indigo-800 overflow-scroll readme-input-section">
         <Collapsible
           trigger="Step 1: Add title, description and socialify image(optional)"
-          open={false}
+          open={true}
         >
           <div className="flex my-2">
             <div className="px-6">
@@ -191,7 +197,7 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
             <div className="px-6">{renderProjectDemoURLInput()}</div>
           </div>
         </Collapsible>
-        <Collapsible trigger="Step 4: Project Screenshots" open={true}>
+        <Collapsible trigger="Step 4: Project Screenshots" open={false}>
           <div className="flex mt-2">
             <div className="px-6">{renderScreenShotsInput()}</div>
           </div>
@@ -214,7 +220,7 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
             <div className="px-6">{renderContributionGuidelinesInput()}</div>
           </div>
         </Collapsible>
-        <Collapsible trigger="Step 8: Technolgies used(Optional)" open={true}>
+        <Collapsible trigger="Step 8: Technolgies used(Optional)" open={false}>
           <div className="flex mt-2">
             <div className="px-6">{renderTechnologiesComponent()}</div>
           </div>
@@ -236,6 +242,44 @@ export default function LeftSectionAdvancedComponent({ updateReadmeContent }) {
           </div>
         </Collapsible>
       </div>
+    );
+  }
+  function renderMarkdownInputComponent() {
+    return (
+      <LeftSectionMarkDownComponent
+        markdown={markdown}
+        updateMarkDownContent={updateMarkDownContent}
+      />
+    );
+  }
+  function renderLeftSection() {
+    if (activeInputOption === LEFT_SECTION_PARTS.FORM_INPUT) {
+      return renderFormInputComponent();
+    } else if (activeInputOption === LEFT_SECTION_PARTS.MARKDOWN_INPUT) {
+      return renderMarkdownInputComponent();
+    }
+  }
+  return (
+    <div className="w-1/2 max-h-screen overflow-hidden">
+      <nav className="w-full flex justify-start border-b">
+        <div
+          className="border border-indigo-200 border-b-0 border-r-0 px-5 py-2 w-56 text-indigo-800 cursor-pointer rounded"
+          onClick={() => updateActiveInputOption(LEFT_SECTION_PARTS.FORM_INPUT)}
+        >
+          Form
+        </div>
+        <div
+          className="border border-indigo-200 border-b-0 px-5 py-2 w-56 text-indigo-800 cursor-pointer rounded-tl rounded-tr"
+          onClick={() =>
+            updateActiveInputOption(LEFT_SECTION_PARTS.MARKDOWN_INPUT)
+          }
+        >
+          Markdown
+        </div>
+      </nav>
+      <MarkdownContext.Provider value={{ formContentJSONArray }}>
+        {renderLeftSection()}
+      </MarkdownContext.Provider>
     </div>
   );
 }
