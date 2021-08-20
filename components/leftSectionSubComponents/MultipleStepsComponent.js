@@ -35,7 +35,7 @@ export default function MultipleStepsComponent(props) {
         </label>
         <input
           type="text"
-          id={`first-text-input${props.firstInputLabelName}`}
+          id={`first-text-input${props.firstInputLabelName}${index}`}
           className="border rounded mt-1 py-1 px-2 w-52"
           placeholder={props.firstInputPlaceholder}
           onChange={(e) =>
@@ -52,7 +52,7 @@ export default function MultipleStepsComponent(props) {
         <label htmlFor="second-text-input">{props.secondInputLabelName}</label>
         <input
           type="text"
-          id={`second-text-input${props.secondInputLabelName}`}
+          id={`second-text-input${props.secondInputLabelName}${index}`}
           className="border rounded mt-1 py-1 px-2 w-52"
           placeholder={props.secondInputPlaceholder}
           onChange={(e) =>

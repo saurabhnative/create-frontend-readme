@@ -31,7 +31,7 @@ export default function RightSectionComponent({ markdown }) {
     }
   }
   return (
-    <div className="w-1/2 border-l text-indigo-800 right-section-container">
+    <div className="md:w-1/2 border-l text-indigo-800 right-section-container">
       <nav className="w-full flex justify-start border-b items-center">
         <div className="border border-indigo-200 px-5 py-2 w-56 border-b-0 border-l-0 rounded-tl rounded-tr">
           Preview

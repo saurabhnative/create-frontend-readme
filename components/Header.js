@@ -9,9 +9,9 @@ function Header({ markdown }) {
     toast.success("Text copied to clipboard!");
   }
   return (
-    <nav className="w-full site-header bg-indigo-800 text-white flex items-center justify-start pl-20">
-      <div className="text-lg font-bold">Create Frontend README</div>
-      <div className="ml-auto mr-6">
+    <nav className="w-full site-header bg-indigo-800 text-white flex items-center justify-start md:pl-20 pl-4">
+      <div className="text-lg font-bold">README gen</div>
+      <div className="ml-auto md:mr-6 mr-2">
         <button onClick={() => copyToClipboard()} className="flex items-center">
           <FaCopy className="mr-1" />
           Copy to Clipboard

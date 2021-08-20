@@ -46,7 +46,7 @@ export default function Home() {
 
       <main>
         <Header markdown={markdown} />
-        <div className="w-full flex">
+        <div className="w-full md:flex">
           <LeftSectionAdvancedComponent
             readmeContent={readmeContent}
             updateReadmeContent={updateReadmeContent}

@@ -260,7 +260,7 @@ export default function LeftSectionAdvancedComponent({
     }
   }
   return (
-    <div className="w-1/2 max-h-screen overflow-hidden">
+    <div className="md:w-1/2 max-h-screen overflow-hidden">
       <nav className="w-full flex justify-start border-b">
         <div
           className={classNames(
