@@ -41,7 +41,7 @@ export default function MultipleStepsComponent(props) {
           onChange={(e) =>
             updateInputArray("firstInputValue", e.target.value, index)
           }
-          value={element.firstInputValue}
+          value={element.firstInputValue || ""}
         />
       </div>
     );
@@ -58,7 +58,7 @@ export default function MultipleStepsComponent(props) {
           onChange={(e) =>
             updateInputArray("secondInputValue", e.target.value, index)
           }
-          value={element.secondInputValue}
+          value={element.secondInputValue || ""}
         />
       </div>
     );
@@ -76,7 +76,7 @@ export default function MultipleStepsComponent(props) {
             onChange={(e) =>
               updateInputArray("thirdInputValue", e.target.value, index)
             }
-            value={element.thirdInputValue}
+            value={element.thirdInputValue || ""}
           />
         </div>
       );
