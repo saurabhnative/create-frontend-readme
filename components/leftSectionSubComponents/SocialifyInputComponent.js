@@ -3,7 +3,7 @@
  */
 import React, { useState, useContext, useEffect } from "react";
 import { IoMdInformationCircleOutline, IoMdOpen } from "react-icons/io";
-import PopUpComponent from "../popupComponent";
+import PopUpComponent from "../popupComponent/InfoPopUp";
 
 import { INFO_POPUP_CONTSTANTS } from "../../constants/utils";
 import { MarkdownContext } from "../LeftSectionAdvancedComponent";

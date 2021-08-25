@@ -1,59 +1,114 @@
 /**
  * Entry file for entire project structure
  */
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
-import Header from "../components/Header";
-import LeftSectionBasicComponent from "../components/LeftSectionBasicComponent";
-import LeftSectionAdvancedComponent from "../components/LeftSectionAdvancedComponent";
-import RightSectionComponent from "../components/RightSectionComponent";
-import TurndownService from "turndown";
-const turndownService = new TurndownService({ codeBlockStyle: "fenced" });
-turndownService.keep("p");
-turndownService.addRule("img", {
-  filter: ["p"],
-  replacement: (content, node) => node.outerHTML + "\n\n",
-});
-turndownService.addRule("h1", {
-  filter: ["h1"],
-  replacement: (content, node) => node.outerHTML + "\n\n",
-});
-turndownService.addRule("h2", {
-  filter: ["h2"],
-  replacement: (content, node) => node.outerHTML + "\n\n",
-});
-turndownService.addRule("img", {
-  filter: ["img"],
-  replacement: (content, node) => node.outerHTML + "\n\n",
-});
+import { FaGithub, FaArrowAltCircleRight, FaPlay } from "react-icons/fa";
+import { RiLoginCircleFill } from "react-icons/ri";
+import Image from "next/image";
+
+import IntroVideoPopUp from "../components/popupComponent/IntroVideoPopUp";
+
 export default function Home() {
-  const [readmeContent, updateReadmeContent] = useState([]);
-  const [markdown, updateMarkDownContent] = useState("");
-
-  useEffect(() => {
-    const updatedMarkdown = turndownService.turndown(
-      readmeContent.toString().replaceAll(",", "")
+  const [isIntroVideoPopUpOpen, updateIntroVideoPopUpOpen] = useState(false);
+  const router = useRouter();
+  function redirectToApp() {
+    router.push("/app");
+  }
+  function redirectToGithub() {
+    window.open(
+      "https://github.com/saurabhnative/create-frontend-readme",
+      "_blank",
+      "noopener,noreferrer"
     );
-    updateMarkDownContent(updatedMarkdown);
-  }, [readmeContent]);
-
+  }
+  function renderButton(text, clickHandler, icon) {
+    return (
+      <button
+        className="border rounded border border-b-4 border-indigo-800 md:px-5 px-3 py-2 text-indigo-800 md:text-xl whitespace-nowrap font-bold hover:bg-indigo-700 hover:text-white bg-white flex items-center"
+        onClick={clickHandler}
+      >
+        <span className="mr-2">{icon}</span>
+        {text}
+      </button>
+    );
+  }
+  function renderLeftSection() {
+    return (
+      <div className="md:w-1/2 h-full flex flex-col justify-center md:pl-6 pl-1">
+        <div className="text-3xl font-bold text-indigo-800">
+          Most advanced README generator for your Github projects
+        </div>
+        <div className="text-gray-600 mt-5 text-xl">
+          Build amazing README files for your project faster than ever before
+        </div>
+        <div className="my-6 flex justify-center md:justify-start">
+          {renderButton("Try Now", redirectToApp, <FaArrowAltCircleRight />)}
+          <div className="ml-6">
+            {renderButton("View on Github", redirectToGithub, <FaGithub />)}
+          </div>
+        </div>
+      </div>
+    );
+  }
+  function renderRightSection() {
+    return (
+      <div className="md:w-1/2 h-full flex flex-col justify-center items-center">
+        <div className="video-container relative cursor-pointer px-2">
+          <Image
+            src="/images/readmegenvidasset.png"
+            alt="Picture of the author"
+            width={600}
+            height={350}
+            className="rounded-lg"
+          />
+          <div className="playButtonContainer absolute">
+            <div
+              className="rounded-full w-16 h-16 flex justify-center items-center bg-gradient-to-r from-indigo-500 to-indigo-800"
+              onClick={() => updateIntroVideoPopUpOpen(true)}
+            >
+              <FaPlay className="playButton text-3xl text-white pl-1 hover:text-4xl" />
+            </div>
+            <IntroVideoPopUp
+              open={isIntroVideoPopUpOpen}
+              setOpen={updateIntroVideoPopUpOpen}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  function redirectToLogin() {
+    router.push("/api/auth/login?returnTo=/app");
+  }
   return (
     <div>
       <Head>
-        <title>Create Frontend README App</title>
+        <title>README GEN</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header markdown={markdown} />
-        <div className="w-full md:flex">
-          <LeftSectionAdvancedComponent
-            readmeContent={readmeContent}
-            updateReadmeContent={updateReadmeContent}
-            markdown={markdown}
-            updateMarkDownContent={updateMarkDownContent}
-          />
-          <RightSectionComponent markdown={markdown} />
+        <div className="bg_image flex justify-center items-center">
+          <div className="body-container bg-white bg-opacity-60 rounded-md border border-indigo-800">
+            <div className="intro-header h-20 bg-white bg-opacity-100 rounded-tl-lg rounded-tr-lg border-b border-indigo-800 flex items-center">
+              <div className="pl-6 text-3xl font-bold text-indigo-800 bg-gradient-to-r from-indigo-500 to-indigo-800 site-title">
+                README Gen
+              </div>
+              <div className="ml-auto mr-6">
+                {renderButton(
+                  "Sign In",
+                  redirectToLogin,
+                  <RiLoginCircleFill />
+                )}
+              </div>
+            </div>
+            <div className="content-container bg-opacity-70 rounded-bl-lg rounded-br-lg md:flex md:items-center">
+              {renderLeftSection()}
+              {renderRightSection()}
+            </div>
+          </div>
         </div>
       </main>
     </div>
