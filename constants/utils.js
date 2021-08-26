@@ -26,4 +26,5 @@ export const INFO_POPUP_CONTSTANTS = {
 export const LEFT_SECTION_PARTS = {
   FORM_INPUT: "formInput",
   MARKDOWN_INPUT: "markdownInput",
+  PREVIEW: "preview",
 };

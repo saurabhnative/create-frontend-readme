@@ -17,26 +17,26 @@ body {
 }
 
 h1 {
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 2em !important;
+  font-weight: 600 !important;
 }
 h2 {
   font-size: 1.5em !important;
   font-weight: 600 !important;
 } /* user agent */
 h3 {
-  font-size: 1.17em;
-  font-weight: 600;
+  font-size: 1.17em !important;
+  font-weight: 600 !important;
 }
 
 a {
-  color: var(--blue);
-  text-decoration: underline;
+  color: var(--blue) !important;
+  text-decoration: underline !important;
 }
 
 img {
-  height: auto;
-  display: inline;
+  height: auto !important;
+  display: inline !important;
 }
 
 .info-tooltip {
@@ -46,13 +46,13 @@ img {
 }
 
 ul {
-  display: block;
-  list-style-type: disc;
-  padding-inline-start: 40px;
+  display: block !important;
+  list-style-type: disc !important;
+  padding-inline-start: 40px !important;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 pre {

@@ -9,6 +9,7 @@ import FeaturesComponent from "./leftSectionSubComponents/FeaturesComponent";
 import MultipleStepsComponent from "./leftSectionSubComponents/MultipleStepsComponent";
 import SupportProjectComponent from "./leftSectionSubComponents/SupportProjectComponent";
 import LeftSectionMarkDownComponent from "./leftSectionSubComponents/LeftSectionMarkDownComponent";
+import RightSectionComponent from "./RightSectionComponent";
 // utility functions
 import generateBasicMarkDownData from "../utils/basicMarkdownGeneration";
 import { updateFormObject } from "../utils/formGeneration";
@@ -257,6 +258,14 @@ export default function LeftSectionAdvancedComponent({
       return renderFormInputComponent();
     } else if (activeInputOption === LEFT_SECTION_PARTS.MARKDOWN_INPUT) {
       return renderMarkdownInputComponent();
+    } else if (activeInputOption === LEFT_SECTION_PARTS.PREVIEW) {
+      return (
+        <RightSectionComponent
+          hideTopNav={true}
+          source={"leftSection"}
+          markdown={markdown}
+        />
+      );
     }
   }
   return (
@@ -287,6 +296,18 @@ export default function LeftSectionAdvancedComponent({
           }
         >
           Markdown
+        </div>
+        <div
+          className={classNames(
+            "border border-indigo-200 border-b-0 px-5 py-2 w-56 text-indigo-800 cursor-pointer rounded md:hidden block",
+            {
+              "bg-indigo-100 bg-opacity-50":
+                activeInputOption === LEFT_SECTION_PARTS.PREVIEW,
+            }
+          )}
+          onClick={() => updateActiveInputOption(LEFT_SECTION_PARTS.PREVIEW)}
+        >
+          Preview
         </div>
       </nav>
       <MarkdownContext.Provider value={{ formContentJSONArray }}>
