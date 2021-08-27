@@ -9,6 +9,8 @@
   --indigo: rgb(55, 48, 163);
   --light-indigo: rgb(199, 210, 254);
   --color-bg-tertiary: rgb(246, 248, 250);
+  --border-grey: rgb(208, 215, 222);
+  --secondary-border-grey: rgb(216, 222, 228);
 }
 
 body {
@@ -20,16 +22,18 @@ h1 {
   font-size: 2em !important;
   font-weight: 600 !important;
 }
+
 h2 {
   font-size: 1.5em !important;
   font-weight: 600 !important;
 } /* user agent */
+
 h3 {
   font-size: 1.17em !important;
   font-weight: 600 !important;
 }
 
-a {
+.readme-output-section a {
   color: var(--blue) !important;
   text-decoration: underline !important;
 }

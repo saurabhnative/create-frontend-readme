@@ -88,9 +88,9 @@ export default function generateBasicMarkDownData(sourceObject) {
           imgString = imgString.concat(
             `<img src="${
               screenshotImageObject.firstInputValue
-            }" alt="shields" style="width: ${
+            }" alt="shields" width=${
               screenshotImageObject.secondInputValue || 400
-            }px; height: ${screenshotImageObject.thirdInputValue || 400}px;"/>`
+            } height=${screenshotImageObject.thirdInputValue || 400}"/>`
           );
         }
       });
