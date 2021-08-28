@@ -45,6 +45,8 @@ yarn install
 ```
 yarn dev
 ```
+Note:- For running authentication using auth0 service create a `.env.local` file and add changes as per official article:-
+<a href="https://auth0.com/docs/quickstart/webapp/nextjs/01-login#configure-the-sdk">Auth0 Next.js Quick Start</a>
 
 <p>4. Create production build using below command</p>
 
