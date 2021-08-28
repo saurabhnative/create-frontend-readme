@@ -1,29 +1,91 @@
-# Next.js + Tailwind CSS Example
+<h1 align="center">README Gen</h1>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<p align="center"><img src="https://res.cloudinary.com/dk22rcdch/image/upload/v1630127769/Blogimages/Screenshot_2021-08-28_at_10.46.02_AM_yapvfb.png" alt="project"></p>
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+<p>README Gen is a tool to build amazing README files for your open source project faster than ever before</p>
 
-## Preview
+<p align="center"><img src="https://img.shields.io/github/license/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/github/stars/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/github/forks/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/twitter/url?style=social&amp;url=https%3A%2F%2Fgithub.com%2Fsaurabhnative%2Fcreate-frontend-readme" alt="shields"></p>
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+<h2>🚀 Demo</h2>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+[https://readme-gen.vercel.app/](https://readme-gen.vercel.app/)
 
-## Deploy your own
+<h2>Project Screenshots:</h2>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+<img src="https://res.cloudinary.com/dk22rcdch/image/upload/v1630128095/Blogimages/Screenshot_2021-08-28_at_10.51.24_AM_pdkh3t.png" alt="shields" width="700" height="400&quot;/">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+  
+  
+<h2>🧐 Features</h2>
 
-## How to use
+Here're some of the project's best features:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+*   Easy to Use
+*   Simple Form based inputs for adding README sections
+*   Markdown editor for further customisation
+*   Code preview section for markdown
+*   Copy Markdown code in a single click
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Clone the repository</p>
+
+```
+git clone repo_url
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+<p>2. Install npm modules</p>
+
+```
+yarn install
+```
+
+<p>3. Start development server using below command</p>
+
+```
+yarn dev
+```
+
+<p>4. Create production build using below command</p>
+
+```
+yarn build
+```
+
+<p>5. Check production build locally using below command</p>
+
+```
+yarn start
+```
+
+<h2>🍰 Contribution Guidelines:</h2>
+
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow/). Create a branch add commits and open a pull request.
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   React.js
+*   Next.js
+*   TailwindCSS - For Styling
+*   react-collapsible - For collapsible menu items
+*   react-icons - For icons used in different sections
+*   react-markdown - For markdown preview
+*   react-tagsinput - For taking multiple input items at once
+*   react-toastify - For toast notification
+*   turndown-For HTML to markdown conversion
+
+<h2>🛡️ License:</h2>
+
+This project is licensed under the MIT License
+
+<h2>💖Like my work?</h2>
+
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️.   
+If you found the app helpful consider supporting me with a coffee
+<p>
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T24KNL5)
+</p>
