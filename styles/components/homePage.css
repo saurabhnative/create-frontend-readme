@@ -38,3 +38,10 @@
   left: 50%;
   margin: -25px 0 0 -25px;
 }
+
+@media (min-width: 768px) {
+  .intro-video-popup {
+    height: 90vh;
+    width: 80vw;
+  }
+}
