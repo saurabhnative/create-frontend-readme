@@ -70,15 +70,15 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 
 Technologies used in the project:
 
-*   React.js
-*   Next.js
-*   TailwindCSS - For Styling
-*   react-collapsible - For collapsible menu items
-*   react-icons - For icons used in different sections
-*   react-markdown - For markdown preview
-*   react-tagsinput - For taking multiple input items at once
-*   react-toastify - For toast notification
-*   turndown-For HTML to markdown conversion
+*  [Next.js](https://nextjs.org/) 
+*  [TailwindCSS](https://tailwindcss.com/)  
+*  [Auth0 for user authentication](https://auth0.com/docs/quickstart/webapp/nextjs) 
+*  [react-collapsible](https://www.npmjs.com/package/react-collapsible)  - For collapsible menu items
+*  [react-icons](https://www.npmjs.com/package/react-icons)  - For icons used in different sections
+*  [react-markdown](https://www.npmjs.com/package/react-markdown)  - For markdown preview
+*  [react-tagsinput](https://www.npmjs.com/package/react-tagsinput)  - For taking multiple input items at once
+*  [react-toastify](https://www.npmjs.com/package/react-toastify)  - For toast notification
+*  [turndown](https://www.npmjs.com/package/turndown)  - For HTML to markdown conversion
 
 <h2>🛡️ License:</h2>
 
