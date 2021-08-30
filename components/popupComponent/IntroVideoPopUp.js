@@ -53,7 +53,7 @@ export default function IntroVideoPopUp(props) {
                 <div className="h-full">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/An6bmCHy7Q0"
+                    src={props.videoUrl}
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

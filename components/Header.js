@@ -3,6 +3,7 @@ import copy from "copy-to-clipboard";
 import { FaCopy } from "react-icons/fa";
 import RenderUserSettings from "./UserSettings";
 import { ToastContainer, toast } from "react-toastify";
+import HelpSection from "./HelpSection";
 import "react-toastify/dist/ReactToastify.css";
 
 function Header({ markdown }) {
@@ -15,13 +16,15 @@ function Header({ markdown }) {
       <div className="text-lg font-bold">README gen</div>
       <div className="ml-auto md:mr-6 mr-2 flex items-center flex-row-reverse">
         <RenderUserSettings />
+        <HelpSection />
         <div>
           <button
             onClick={() => copyToClipboard()}
             className="flex items-center border-white border rounded p-2 bg-white text-indigo-800 bg-opacity-90"
           >
             <FaCopy className="mr-1" />
-            Copy to Clipboard
+            <div className="md:block hidden">Copy to Clipboard</div>
+            <div className="md:hidden block">Copy</div>
           </button>
         </div>
 

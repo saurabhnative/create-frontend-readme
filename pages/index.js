@@ -55,7 +55,10 @@ export default function Home() {
   function renderRightSection() {
     return (
       <div className="md:w-1/2 h-full flex flex-col justify-center items-center">
-        <div className="video-container relative cursor-pointer px-2">
+        <div
+          className="video-container relative cursor-pointer px-2"
+          onClick={() => updateIntroVideoPopUpOpen(true)}
+        >
           <Image
             src="/images/readmegenvidasset.png"
             alt="Picture of the author"
@@ -64,15 +67,13 @@ export default function Home() {
             className="rounded-lg"
           />
           <div className="playButtonContainer absolute">
-            <div
-              className="rounded-full w-16 h-16 flex justify-center items-center bg-gradient-to-r from-indigo-500 to-indigo-800"
-              onClick={() => updateIntroVideoPopUpOpen(true)}
-            >
+            <div className="rounded-full w-16 h-16 flex justify-center items-center bg-gradient-to-r from-indigo-500 to-indigo-800">
               <FaPlay className="playButton text-3xl text-white pl-1 hover:text-4xl" />
             </div>
             <IntroVideoPopUp
               open={isIntroVideoPopUpOpen}
               setOpen={updateIntroVideoPopUpOpen}
+              videoUrl={"https://www.youtube.com/embed/An6bmCHy7Q0"}
             />
           </div>
         </div>

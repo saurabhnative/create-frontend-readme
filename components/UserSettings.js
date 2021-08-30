@@ -12,7 +12,7 @@ export default function RenderUserSettings() {
   function redirectToLogOut() {
     router.push("/api/auth/logout");
   }
-  if (!error && user) {
+  if (!error && !user) {
     return (
       <div className="ml-3">
         <Menu as="div" className="relative inline-block text-left">
@@ -22,7 +22,7 @@ export default function RenderUserSettings() {
               onClick={() => updateActive(!active)}
             >
               <FaUserCircle className="mr-1 text-xl" />
-              Profile
+              <div className="md:block hidden">Profile</div>
               <FiChevronDown
                 className="-mr-1 ml-1 h-5 w-5"
                 aria-hidden="true"
