@@ -90,7 +90,7 @@ export default function generateBasicMarkDownData(sourceObject) {
               screenshotImageObject.firstInputValue
             }" alt="shields" width=${
               screenshotImageObject.secondInputValue || 400
-            } height=${screenshotImageObject.thirdInputValue || 400}"/>`
+            } height=${screenshotImageObject.thirdInputValue || 400}/>`
           );
         }
       });
