@@ -38,7 +38,6 @@ export default function Home() {
       updateMarkDownContent(updatedMarkdown);
     }
   }, [readmeContent]);
-
   return (
     <div>
       <Head>
