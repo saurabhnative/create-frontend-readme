@@ -16,7 +16,7 @@ export default function HelpSection() {
       <IntroVideoPopUp
         open={isIntroVideoPopUpOpen}
         setOpen={updateIntroVideoPopUpOpen}
-        videoUrl={"https://www.youtube.com/embed/An6bmCHy7Q0"}
+        videoUrl={"https://www.youtube.com/embed/IFuQYiTnU8M"}
       />
     </div>
   );
