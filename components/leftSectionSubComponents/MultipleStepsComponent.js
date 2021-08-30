@@ -48,7 +48,7 @@ export default function MultipleStepsComponent(props) {
   }
   function renderSecondInput(index, element) {
     return (
-      <div className="flex flex-col items-start ml-4">
+      <div className="flex flex-col items-start md:ml-4">
         <label htmlFor="second-text-input">{props.secondInputLabelName}</label>
         <input
           type="text"
@@ -66,7 +66,7 @@ export default function MultipleStepsComponent(props) {
   function renderThirdInput(index, element) {
     if (props.thirdInputLabelName && props.thirdInputPlaceholder) {
       return (
-        <div className="flex flex-col items-start ml-4">
+        <div className="flex flex-col items-start md:ml-4">
           <label htmlFor="third-text-input">{props.thirdInputLabelName}</label>
           <input
             type="text"
@@ -85,7 +85,7 @@ export default function MultipleStepsComponent(props) {
   function renderInstallationSteps() {
     return multiStepInputArray.map((element, index) => {
       return (
-        <div className="flex mt-2" key={index}>
+        <div className="md:flex mt-2" key={index}>
           {renderFirstInput(index, element)}
           {renderSecondInput(index, element)}
           {renderThirdInput(index, element)}

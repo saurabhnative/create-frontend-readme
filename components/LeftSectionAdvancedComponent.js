@@ -180,12 +180,12 @@ export default function LeftSectionAdvancedComponent({
           trigger="Step 1: Add title, description and socialify image(optional)"
           open={true}
         >
-          <div className="flex my-2">
+          <div className="md:flex my-2">
             <div className="px-6">
               {renderTitleInput()}
               {renderDescriptionInput()}
             </div>
-            <div>{renderSocialifyInput()}</div>
+            <div className="px-6 md:px-0">{renderSocialifyInput()}</div>
           </div>
         </Collapsible>
         <Collapsible trigger="Step 2: Add shields io badges" open={false}>

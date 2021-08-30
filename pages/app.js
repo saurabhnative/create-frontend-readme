@@ -31,10 +31,12 @@ export default function Home() {
   const [markdown, updateMarkDownContent] = useState("");
 
   useEffect(() => {
-    const updatedMarkdown = turndownService.turndown(
-      readmeContent.toString().replaceAll(",", "")
-    );
-    updateMarkDownContent(updatedMarkdown);
+    if (readmeContent && readmeContent.length && readmeContent.toString()) {
+      const updatedMarkdown = turndownService.turndown(
+        readmeContent.toString().replaceAll(",", "")
+      );
+      updateMarkDownContent(updatedMarkdown);
+    }
   }, [readmeContent]);
 
   return (

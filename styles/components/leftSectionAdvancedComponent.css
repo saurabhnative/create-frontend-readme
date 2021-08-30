@@ -42,15 +42,25 @@
 }
 
 .react-tagsinput {
-  width: 32rem;
+  width: 20rem;
   text-align: left;
   border: 1px solid rgb(229, 231, 235) !important;
   border-radius: 0.25rem;
 }
 
 .react-tagsinput-input {
-  width: 30rem !important;
+  width: 20rem !important;
 }
+
+@media (min-width: 768px) {
+  .react-tagsinput {
+    width: 32rem;
+  }
+  .react-tagsinput-input {
+    width: 30rem !important;
+  }
+}
+
 .react-tagsinput-input::placeholder {
   font-size: 1rem;
 }
