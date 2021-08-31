@@ -33,7 +33,7 @@ export default function Home() {
   useEffect(() => {
     if (readmeContent && readmeContent.length && readmeContent.toString()) {
       const updatedMarkdown = turndownService.turndown(
-        readmeContent.toString().replaceAll(",", "")
+        readmeContent.toString().split(",").join("")
       );
       updateMarkDownContent(updatedMarkdown);
     }
