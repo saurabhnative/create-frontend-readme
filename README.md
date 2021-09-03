@@ -4,7 +4,10 @@
 
 <p>README Gen is a tool to build amazing README files for your open source project faster than ever before</p>
 
-<p align="center"><img src="https://img.shields.io/github/license/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/github/stars/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/github/forks/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/twitter/url?style=social&amp;url=https%3A%2F%2Fgithub.com%2Fsaurabhnative%2Fcreate-frontend-readme" alt="shields"></p>
+<p align="center"><img src="https://img.shields.io/github/license/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/github/stars/saurabhnative/create-frontend-readme" alt="shields"><img src="https://img.shields.io/github/forks/saurabhnative/create-frontend-readme" alt="shields"><a href="https://twitter.com/intent/tweet?text=Checkout%20readme-gen.vercel.app%20by%20@saurabhnative.%20Most%20advanced%20README%20generator%20for%20your%20Github projects🔥">
+<a href="https://twitter.com/intent/tweet?text=Checkout%20readme-gen.vercel.app%20by%20@saurabhnative.%20Most%20advanced%20README%20generator%20for%20your%20Github projects🔥"><img src="https://img.shields.io/twitter/url?style=social&amp;url=https%3A%2F%2Fgithub.com%2Fsaurabhnative%2Fcreate-frontend-readme"></a>
+</p>
+
 
 <h2>🚀 Demo</h2>
 
