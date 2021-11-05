@@ -15,12 +15,12 @@ export default function generateBasicMarkDownData(sourceObject) {
     const value = sourceObject.value;
     const key = sourceObject.element;
     if (key === "title") {
-      markdownData.push(`<h1 align="center">${value}</h1>`);
+      markdownData.push(`<h1 align="center" id="title">${value}</h1>`);
     } else if (key === "description") {
-      markdownData.push(`<p>${value}</p>`);
+      markdownData.push(`<p id="description">${value}</p>`);
     } else if (key === "socialifyImage") {
       markdownData.push(
-        `<p align="center"><img src="${value}" alt="project"/></p>`
+        `<p align="center"><img src="${value}" alt="project-image"/></p>`
       );
     } else if (key === "shieldsData") {
       const shieldsArray = value;
@@ -38,7 +38,7 @@ export default function generateBasicMarkDownData(sourceObject) {
     } else if (key === "projectDemo") {
       markdownData.push(`<div>
         <h2>🚀 Demo</h2>
-        <a href="${value}" alt="vale">${value}</a>
+        <a href="${value}" alt="project-demo-url">${value}</a>
         </div>`);
     } else if (key === "featuresList") {
       const featuresArray = value;
@@ -88,7 +88,7 @@ export default function generateBasicMarkDownData(sourceObject) {
           imgString = imgString.concat(
             `<img src="${
               screenshotImageObject.firstInputValue
-            }" alt="shields" width=${
+            }" alt="project-screenshot" width=${
               screenshotImageObject.secondInputValue || 400
             } height=${screenshotImageObject.thirdInputValue || 400}/>`
           );
