@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.5.0",
@@ -25,7 +26,10 @@
     "turndown": "^7.1.1"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.1",
+    "@testing-library/react": "^12.1.2",
     "autoprefixer": "^10.2.6",
+    "cypress": "^8.7.0",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
   }
