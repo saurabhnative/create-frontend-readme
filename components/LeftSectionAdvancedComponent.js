@@ -179,6 +179,7 @@ export default function LeftSectionAdvancedComponent({
         <Collapsible
           trigger="Step 1: Add title, description and socialify image(optional)"
           open={true}
+          containerElementProps={{ id: "titleDescriptionContainer" }}
         >
           <div className="md:flex my-2">
             <div className="px-6">
@@ -188,27 +189,47 @@ export default function LeftSectionAdvancedComponent({
             <div className="px-6 md:px-0">{renderSocialifyInput()}</div>
           </div>
         </Collapsible>
-        <Collapsible trigger="Step 2: Add shields io badges" open={false}>
+        <Collapsible
+          trigger="Step 2: Add shields io badges"
+          open={false}
+          containerElementProps={{ id: "ShieldsIOContainer" }}
+        >
           <div className="flex mt-2">
             <div className="px-6">{renderSheildsIOInput()}</div>
           </div>
         </Collapsible>
-        <Collapsible trigger="Step 3: Project Demo" open={false}>
+        <Collapsible
+          trigger="Step 3: Project Demo"
+          open={false}
+          containerElementProps={{ id: "projectDemoContainer" }}
+        >
           <div className="flex my-2">
             <div className="px-6">{renderProjectDemoURLInput()}</div>
           </div>
         </Collapsible>
-        <Collapsible trigger="Step 4: Project Screenshots" open={false}>
+        <Collapsible
+          trigger="Step 4: Project Screenshots"
+          open={false}
+          containerElementProps={{ id: "projectScreenShotsContainer" }}
+        >
           <div className="flex mt-2">
             <div className="px-6">{renderScreenShotsInput()}</div>
           </div>
         </Collapsible>
-        <Collapsible trigger="Step 5: Features" open={false}>
+        <Collapsible
+          trigger="Step 5: Features"
+          open={false}
+          containerElementProps={{ id: "featuresContainer" }}
+        >
           <div className="flex mt-2">
             <div className="px-6">{renderFeaturesComponent()}</div>
           </div>
         </Collapsible>
-        <Collapsible trigger="Step 6: Installation Steps" open={false}>
+        <Collapsible
+          trigger="Step 6: Installation Steps"
+          open={false}
+          containerElementProps={{ id: "installationStepsContainer" }}
+        >
           <div className="flex mt-2">
             <div className="px-6">{renderInstallationStepsComponent()}</div>
           </div>

@@ -50,7 +50,10 @@ export default function FeaturesComponent(props) {
           <div>{renderFeaturesInfoPopUp()}</div>
         </div>
       </div>
-      <div className="my-2">
+      <div
+        className="my-2"
+        data-cy={`features-input-tags-container${props.labelName}`}
+      >
         <TagsInput
           value={featuresList}
           onChange={updateFeaturesData}

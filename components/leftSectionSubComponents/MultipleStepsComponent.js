@@ -35,6 +35,10 @@ export default function MultipleStepsComponent(props) {
         </label>
         <input
           type="text"
+          data-cy={`first-text-input${props.firstInputLabelName.replace(
+            / /g,
+            ""
+          )}${index}`}
           id={`first-text-input${props.firstInputLabelName}${index}`}
           className="border rounded mt-1 py-1 px-2 w-52"
           placeholder={props.firstInputPlaceholder}
@@ -53,6 +57,10 @@ export default function MultipleStepsComponent(props) {
         <input
           type="text"
           id={`second-text-input${props.secondInputLabelName}${index}`}
+          data-cy={`second-text-input${props.secondInputLabelName.replace(
+            / /g,
+            ""
+          )}${index}`}
           className="border rounded mt-1 py-1 px-2 w-52"
           placeholder={props.secondInputPlaceholder}
           onChange={(e) =>
@@ -70,7 +78,11 @@ export default function MultipleStepsComponent(props) {
           <label htmlFor="third-text-input">{props.thirdInputLabelName}</label>
           <input
             type="text"
-            id="second-text-input"
+            id="third-text-input"
+            data-cy={`third-text-input${props.thirdInputLabelName.replace(
+              / /g,
+              ""
+            )}${index}`}
             className="border rounded mt-1 py-1 px-2 w-52"
             placeholder={props.thirdInputPlaceholder}
             onChange={(e) =>
@@ -103,6 +115,7 @@ export default function MultipleStepsComponent(props) {
       <button
         className="bg-indigo-800 text-white px-3 py-1 rounded my-4"
         onClick={() => addAnotherStep()}
+        data-cy={`${props.firstInputLabelName}-button`}
       >
         <div className="flex items-center">
           <FiPlusCircle />

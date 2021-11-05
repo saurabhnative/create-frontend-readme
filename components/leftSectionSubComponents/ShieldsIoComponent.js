@@ -61,7 +61,7 @@ export default function ShieldsIoComponent(props) {
           </button>
         </div>
       </div>
-      <div className="my-2">
+      <div className="my-2" id={"shields-io-input-container"}>
         <TagsInput
           value={badgeURLs}
           onChange={updateShieldsURL}
