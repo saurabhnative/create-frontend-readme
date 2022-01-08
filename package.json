@@ -7,30 +7,31 @@
     "cypress": "cypress open"
   },
   "dependencies": {
-    "@auth0/nextjs-auth0": "^1.5.0",
-    "@headlessui/react": "^1.4.0",
-    "classnames": "^2.3.1",
-    "copy-to-clipboard": "^3.3.1",
-    "lodash": "^4.17.21",
+    "@auth0/nextjs-auth0": "1.5.0",
+    "@headlessui/react": "1.4.0",
+    "@sentry/nextjs": "6.16.1",
+    "classnames": "2.3.1",
+    "copy-to-clipboard": "3.3.1",
+    "lodash": "4.17.21",
     "next": "latest",
-    "react": "^17.0.2",
-    "react-collapsible": "^2.8.3",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
-    "react-markdown": "^6.0.2",
-    "react-tagsinput": "^3.19.0",
-    "react-toastify": "^7.0.4",
-    "react-tooltip": "^4.2.21",
-    "rehype-raw": "^5.1.0",
-    "remark-gfm": "^1.0.0",
-    "turndown": "^7.1.1"
+    "react": "17.0.2",
+    "react-collapsible": "2.8.3",
+    "react-dom": "17.0.2",
+    "react-icons": "4.2.0",
+    "react-markdown": "6.0.2",
+    "react-tagsinput": "3.19.0",
+    "react-toastify": "7.0.4",
+    "react-tooltip": "4.2.21",
+    "rehype-raw": "5.1.0",
+    "remark-gfm": "1.0.0",
+    "turndown": "7.1.1"
   },
   "devDependencies": {
-    "@testing-library/cypress": "^8.0.1",
-    "@testing-library/react": "^12.1.2",
-    "autoprefixer": "^10.2.6",
-    "cypress": "^8.7.0",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "@testing-library/cypress": "8.0.1",
+    "@testing-library/react": "12.1.2",
+    "autoprefixer": "10.2.6",
+    "cypress": "8.7.0",
+    "postcss": "8.3.5",
+    "tailwindcss": "2.2.4"
   }
 }

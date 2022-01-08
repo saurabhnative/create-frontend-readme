@@ -37,3 +37,5 @@ cypress.env.json
 #cypress
 cypress/videos
 cypress/screenshots
+# Sentry
+.sentryclirc
